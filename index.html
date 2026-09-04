@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>التجمع الوطني للأحرار | RNI</title>
+
+    <meta name="description"
+          content="موقع نموذجي لحزب التجمع الوطني للأحرار - الأخبار، الرؤية، البرامج والأنشطة">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Cairo", sans-serif;
+            background: #f7f7f7;
+            color: #222;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .topbar {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 7px;
+            font-size: 13px;
+        }
+
+        .navbar {
+            max-width: 1250px;
+            margin: auto;
+            padding: 16px 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #111;
+            font-weight: 900;
+            font-size: 24px;
+        }
+
+        .logo-mark {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #e00000;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-weight: 900;
+            font-size: 19px;
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        nav a {
+            color: #222;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 700;
+            transition: .2s;
+        }
+
+        nav a:hover {
+            color: #d90000;
+        }
+
+        .join-btn {
+            background: #d90000;
+            color: white !important;
+            padding: 10px 18px;
+            border-radius: 7px;
+        }
+
+        .menu-btn {
+            display: none;
+            border: none;
+            background: transparent;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 600px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.80),
+                    rgba(0,0,0,.35)
+                ),
+                url("https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            width: 1250px;
+            max-width: 90%;
+            margin: auto;
+            color: white;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: #d90000;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 72px);
+            line-height: 1.15;
+            max-width: 750px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            max-width: 680px;
+            line-height: 2;
+            color: #eee;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        .btn-red {
+            background: #d90000;
+            color: white;
+        }
+
+        .btn-white {
+            background: white;
+            color: #111;
+        }
+
+        /* ================= SECTION ================= */
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title span {
+            color: #d90000;
+            font-weight: 800;
+            font-size: 14px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            font-weight: 900;
+            margin-top: 5px;
+        }
+
+        .section-title p {
+            color: #777;
+            margin-top: 10px;
+        }
+
+        /* ================= CARDS ================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,.07);
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(0,0,0,.12);
+        }
+
+        .card-image {
+            height: 210px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-body {
+            padding: 22px;
+        }
+
+        .card-date {
+            color: #d90000;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .card h3 {
+            margin-top: 8px;
+            font-size: 19px;
+            line-height: 1.7;
+        }
+
+        .card p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.9;
+            margin-top: 8px;
+        }
+
+        /* ================= VISION ================= */
+
+        .vision {
+            background: #111;
+            color: white;
+        }
+
+        .vision-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .vision h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .vision p {
+            color: #ccc;
+            line-height: 2.1;
+            font-size: 16px;
+        }
+
+        .vision-boxes {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 15px;
+        }
+
+        .vision-box {
+            background: #1d1d1d;
+            padding: 30px;
+            border-radius: 10px;
+            border-right: 4px solid #d90000;
+        }
+
+        .vision-box strong {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .vision-box span {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* ================= LEADER ================= */
+
+        .leader {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .leader-photo {
+            height: 420px;
+            border-radius: 15px;
+            background:
+                url("https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=85")
+                center/cover;
+        }
+
+        .leader h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .leader h4 {
+            color: #d90000;
+            margin-bottom: 20px;
+        }
+
+        .leader p {
+            color: #666;
+            line-height: 2;
+        }
+
+        /* ================= STATS ================= */
+
+        .stats {
+            background: #d90000;
+            color: white;
+        }
+
+        .stats-grid {
+            max-width: 1000px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            text-align: center;
+            gap: 20px;
+        }
+
+        .stat strong {
+            font-size: 40px;
+            font-weight: 900;
+            display: block;
+        }
+
+        .stat span {
+            font-size: 14px;
+        }
+
+        /* ================= NEWSLETTER ================= */
+
+        .newsletter {
+            background: white;
+            text-align: center;
+        }
+
+        .newsletter-box {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .newsletter input {
+            width: 65%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            font-family: inherit;
+            margin-top: 20px;
+        }
+
+        .newsletter button {
+            padding: 15px 22px;
+            background: #d90000;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-family: inherit;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #101010;
+            color: white;
+            padding: 55px 20px 25px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        footer h3 {
+            margin-bottom: 18px;
+        }
+
+        footer p,
+        footer a {
+            color: #aaa;
+            line-height: 2;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        footer a {
+            display: block;
+        }
+
+        .copyright {
+            border-top: 1px solid #333;
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+            color: #777;
+            font-size: 13px;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 900px) {
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                left: 0;
+
+                background: white;
+                padding: 20px;
+
+                flex-direction: column;
+                box-shadow: 0 10px 25px rgba(0,0,0,.1);
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .vision-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .leader {
+                grid-template-columns: 1fr;
+            }
+
+            .leader-photo {
+                height: 350px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter input {
+                width: 100%;
+            }
+
+            .newsletter button {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .navbar {
+                padding: 12px 15px;
+            }
+
+            .logo {
+                font-size: 19px;
+            }
+
+            .logo-mark {
+                width: 40px;
+                height: 40px;
+            }
+
+            section {
+                padding: 60px 15px;
+            }
+
+            .hero {
+                min-height: 550px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .vision h2,
+            .leader h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+    موقع نموذجي غير رسمي — للتجربة والتطوير
+</div>
+
+<!-- HEADER -->
+<header>
+
+    <div class="navbar">
+
+        <a href="#" class="logo">
+            <div class="logo-mark">RNI</div>
+            التجمع الوطني للأحرار
+        </a>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <nav id="navigation">
+
+            <a href="#home">الرئيسية</a>
+            <a href="#news">الأخبار</a>
+            <a href="#vision">رؤيتنا</a>
+            <a href="#leader">القيادة</a>
+            <a href="#program">البرنامج</a>
+            <a href="#contact">تواصل معنا</a>
+
+            <a href="#join" class="join-btn">
+                انضم إلينا
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span class="hero-tag">
+            التجمع الوطني للأحرار
+        </span>
+
+        <h1>
+            من أجل مغرب
+            <br>
+            أفضل للجميع
+        </h1>
+
+        <p>
+            رؤية سياسية واجتماعية تضع المواطن في صلب العمل
+            وتؤمن بالإنصات والقرب والاستثمار في الإنسان.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#program" class="btn btn-red">
+                اكتشف البرنامج
+            </a>
+
+            <a href="#news" class="btn btn-white">
+                آخر الأخبار
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NEWS -->
+<section id="news">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>المستجدات</span>
+
+            <h2>
+                آخر الأخبار
+            </h2>
+
+            <p>
+                تابع آخر المستجدات والأنشطة
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <article class="card">
+
+                <div class="card-image"
+                     style="background-image:url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=900&q=85')">
+                </div>
+
+                <div class="card-body">
+
+                    <span class="card-date">
+                        أخبار الحزب
+                    </span>
+
+                    <h3>
+                        مواصلة العمل من أجل تعزيز التنمية
+                    </h3>
+
+                    <p>
+                        مبادرات وبرامج تهدف إلى دعم التنمية
+                        وتعزيز القرب من المواطنين.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-image"
+                     style="background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85')">
+                </div>
+
+                <div class="card-body">
+
+                    <span class="card-date">
+                        أنشطة
+                    </span>
+
+                    <h3>
+                        الإنصات للمواطنين أولوية
+                    </h3>
+
+                    <p>
+                        لقاءات تواصلية للاستماع إلى انتظارات
+                        المواطنين ومناقشة القضايا المحلية.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-image"
+                     style="background-image:url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=900&q=85')">
+                </div>
+
+                <div class="card-body">
+
+                    <span class="card-date">
+                        برامج
+                    </span>
+
+                    <h3>
+                        الاستثمار في الإنسان
+                    </h3>
+
+                    <p>
+                        وضع الرأسمال البشري في قلب الرؤية
+                        والعمل السياسي والاجتماعي.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- VISION -->
+<section class="vision" id="vision">
+
+    <div class="container">
+
+        <div class="vision-grid">
+
+            <div>
+
+                <span style="color:#e00000;font-weight:800;">
+                    رؤيتنا
+                </span>
+
+                <h2>
+                    المواطن أولاً
+                </h2>
+
+                <p>
+                    نؤمن بأهمية الرأسمال البشري وبضرورة جعل
+                    قضايا المواطنين في صلب العمل السياسي.
+                    كما نؤمن بالحوار والإنصات والمشاركة
+                    والمسؤولية.
+                </p>
+
+                <br>
+
+                <a href="#program"
+                   class="btn btn-red">
+                    تعرف على رؤيتنا
+                </a>
+
+            </div>
+
+
+            <div class="vision-boxes">
+
+                <div class="vision-box">
+                    <strong>المساواة</strong>
+                    <span>
+                        تكافؤ الفرص والعدالة الاجتماعية.
+                    </span>
+                </div>
+
+                <div class="vision-box">
+                    <strong>المسؤولية</strong>
+                    <span>
+                        عمل سياسي مسؤول وقريب من المواطن.
+                    </span>
+                </div>
+
+                <div class="vision-box">
+                    <strong>التنمية</strong>
+                    <span>
+                        الاستثمار في الإنسان والمجالات.
+                    </span>
+                </div>
+
+                <div class="vision-box">
+                    <strong>الثقة</strong>
+                    <span>
+                        بناء علاقة قوية بين المواطن والمؤسسات.
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LEADER -->
+<section id="leader">
+
+    <div class="container">
+
+        <div class="leader">
+
+            <div class="leader-photo"></div>
+
+            <div>
+
+                <span style="color:#d90000;font-weight:800;">
+                    القيادة
+                </span>
+
+                <h2>
+                    قيادة الحزب
+                </h2>
+
+                <h4>
+                    التجمع الوطني للأحرار
+                </h4>
+
+                <p>
+                    يعكس العمل التنظيمي للحزب أهمية المؤسسات
+                    والهياكل الداخلية في تأطير المناضلين
+                    ومواصلة التواصل مع المواطنين.
+                </p>
+
+                <br>
+
+                <a href="#contact"
+                   class="btn btn-red">
+                    تعرف على التنظيم
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROGRAM -->
+<section id="program"
+         style="background:#f0f0f0;">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>برنامجنا</span>
+
+            <h2>
+                أولويات العمل
+            </h2>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-body">
+
+                    <h3>
+                        🏥 الصحة
+                    </h3>
+
+                    <p>
+                        تحسين جودة الخدمات وتقريبها
+                        من المواطنين.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-body">
+
+                    <h3>
+                        🎓 التعليم
+                    </h3>
+
+                    <p>
+                        الاستثمار في المدرسة والطالب
+                        والموارد البشرية.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-body">
+
+                    <h3>
+                        💼 التشغيل
+                    </h3>
+
+                    <p>
+                        دعم الاستثمار والمقاولات
+                        وخلق فرص العمل.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STATS -->
+<section class="stats">
+
+    <div class="stats-grid">
+
+        <div class="stat">
+            <strong>01</strong>
+            <span>رؤية وطنية</span>
+        </div>
+
+        <div class="stat">
+            <strong>12</strong>
+            <span>جهة</span>
+        </div>
+
+        <div class="stat">
+            <strong>100%</strong>
+            <span>قرب من المواطن</span>
+        </div>
+
+        <div class="stat">
+            <strong>∞</strong>
+            <span>طموح للمستقبل</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NEWSLETTER -->
+<section class="newsletter" id="join">
+
+    <div class="newsletter-box">
+
+        <div class="section-title">
+
+            <span>النشرة الإخبارية</span>
+
+            <h2>
+                ابقَ على اطلاع
+            </h2>
+
+            <p>
+                أدخل بريدك الإلكتروني للتوصل بالمستجدات.
+            </p>
+
+        </div>
+
+        <form onsubmit="subscribe(event)">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="البريد الإلكتروني"
+                required
+            >
+
+            <button type="submit">
+                اشتراك
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer id="contact">
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h3>
+                التجمع الوطني للأحرار
+            </h3>
+
+            <p>
+                موقع نموذجي تعليمي لتطوير واجهة
+                ويب سياسية حديثة.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                روابط
+            </h3>
+
+            <a href="#home">الرئيسية</a>
+            <a href="#news">الأخبار</a>
+            <a href="#vision">رؤيتنا</a>
+            <a href="#program">البرنامج</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                تواصل
+            </h3>
+
+            <a href="#">
+                Facebook
+            </a>
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                YouTube
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 — مشروع ويب تجريبي غير رسمي
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    function toggleMenu() {
+
+        const nav = document.getElementById("navigation");
+
+        nav.classList.toggle("active");
+
+    }
+
+
+    function subscribe(event) {
+
+        event.preventDefault();
+
+        const email =
+            document.getElementById("email").value;
+
+        if (email) {
+
+            alert(
+                "شكراً لك! تم تسجيل البريد الإلكتروني: " + email
+            );
+
+            document.getElementById("email").value = "";
+
+        }
+
+    }
+
+
+    document.querySelectorAll("nav a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            document
+                .getElementById("navigation")
+                .classList.remove("active");
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
